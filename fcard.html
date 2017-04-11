@@ -1,0 +1,90 @@
+<link rel="import" href="../polymer/polymer/polymer.html">
+
+<dom-module id="f-card">
+    <template>
+        <style>
+            :host
+            {
+                display: inline-block;
+                width: 250px;
+                cursor: default;
+                box-shadow: 0 0 40px rgba(0,0,0,.2);
+            }
+
+            p
+            {
+                margin: 0;
+                font-family: meiryo;
+                font-size: 30px;
+                transition-property: opacity;
+                transition-duration: .2s;
+            }
+
+            .face-top
+            {
+                border-bottom-style: dotted;
+                border-bottom-width: 1px;
+            }
+
+            .face
+            {
+                min-height: 100px;
+                padding: 10px;
+                box-sizing: border-box;
+                transition-property: background-color;
+                transition-duration: .2s;
+            }
+
+            .hidden
+            {
+                background-color: blue;
+                user-select: none;
+                transition-property: background-color;
+                transition-duration: .2s;
+            }
+
+            .hidden.red
+            {
+                background-color: red;
+            }
+
+            .hidden p
+            {
+                opacity: 0;
+            }
+        </style>
+
+        <div class="face face-top">
+            <p>sample text1</p>
+        </div>
+
+        <div id="bottom" on-click="unhide" class="face hidden">
+            <p>sample text2</p>
+        </div>
+        
+    </template>
+
+    <script>
+        class fCard extends Polymer.Element
+        {
+            static get is()
+            {
+                return"f-card";
+            }
+
+            static get properties()
+            {
+                return {
+
+                };
+            }
+
+            unhide(e)
+            {
+                this.$.bottom.classList.remove("hidden");
+            }
+        }
+
+        customElements.define(fCard.is,fCard);
+    </script>
+</dom-module>
