@@ -10,4 +10,5 @@ function main()
     a.bottext="c";
 
     fcards.appendChild(a);
+
 }
