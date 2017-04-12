@@ -37,7 +37,7 @@
 
             .hidden
             {
-                background-color: blue;
+                background-color: #1C7FE8;
                 user-select: none;
                 transition-property: background-color;
                 transition-duration: .2s;
@@ -54,12 +54,12 @@
             }
         </style>
 
-        <div class="face face-top">
-            <p>sample text1</p>
+        <div id="top" class="face face-top">
+            <p>[[toptext]]</p>
         </div>
 
         <div id="bottom" on-click="unhide" class="face hidden">
-            <p>sample text2</p>
+            <p>[[bottext]]</p>
         </div>
         
     </template>
@@ -75,13 +75,34 @@
             static get properties()
             {
                 return {
-
+                    toptext:{type:String},
+                    bottext:{type:String}
                 };
+            }
+
+            ready()
+            {
+                super.ready();
+
+                this.randomSwitch();
+
+                // this.$.top.appendChild(this.children[0]);
+                // this.$.bottom.appendChild(this.children[1]);
             }
 
             unhide(e)
             {
                 this.$.bottom.classList.remove("hidden");
+            }
+
+            randomSwitch()
+            {
+                if (Math.floor(Math.random()*2))
+                {
+                    var a=this.toptext;
+                    this.toptext=this.bottext;
+                    this.bottext=a;
+                }
             }
         }
 
