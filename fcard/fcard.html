@@ -1,5 +1,11 @@
 <link rel="import" href="../polymer/polymer/polymer.html">
 
+<!--
+settable stuff:
+toptext
+bottext
+-->
+
 <dom-module id="f-card">
     <template>
         <style>
@@ -107,8 +113,7 @@
             static get properties()
             {
                 return {
-                    toptext:{type:String},
-                    bottext:{type:String}
+                    
                 };
             }
 
@@ -117,9 +122,6 @@
                 super.ready();
 
                 this.randomSwitch();
-
-                // this.$.top.appendChild(this.children[0]);
-                // this.$.bottom.appendChild(this.children[1]);
             }
 
             unhide(e)
@@ -141,6 +143,11 @@
                     this.toptext=this.bottext;
                     this.bottext=a;
                 }
+            }
+
+            hideReset()
+            {
+                this.$.bottom.classList.add("hidden");
             }
         }
 
