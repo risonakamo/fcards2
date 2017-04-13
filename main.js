@@ -1,13 +1,69 @@
 window.onload=main;
 
+var cards=[];
 function main()
 {
-    var fcards=document.querySelector(".fcards");
+    var loadfile=window.location.hash.split("#");
 
-    var a=new fCard();
+    if (loadfile.length<2)
+    {
+        return;
+    }
 
-    a.toptext="3 what rings u got bnitc-acosaihd fw4kj3k4 tklj lkjer ";
-    a.bottext="c";
+    var cardget=new XMLHttpRequest();
+    cardget.open("get","cards/"+loadfile[1]+".json");
+    cardget.responseType="json";
+    cardget.onreadystatechange=()=>{
+        if (cardget.readyState==4)
+        {
+            loadCards(cardget.response);
+        }
+    };
+    cardget.send();
 
-    fcards.appendChild(a);
+    setTimeout(()=>{
+        appendCards();
+    },5000);
+}
+
+function loadCards(data)
+{
+    var newcard;
+
+    for (var x=0;x<data.boxes.length;x++)
+    {
+        newcard=new fCard();
+        newcard.toptext=data.boxes[x][0];
+        newcard.bottext=data.boxes[x][1];
+
+        cards.push(newcard);
+    }
+
+    appendCards();
+}
+
+function appendCards()
+{
+    var cardsinsert=document.querySelector(".fcards");
+    var insertIndex;
+    var switchItem;
+
+    cardsinsert.classList.add("hidden");
+    cardsinsert.innerHTML="";
+
+    for (var x=cards.length;x>=0;x--)
+    {
+        insertIndex=Math.floor(Math.random()*x);
+
+        cardsinsert.appendChild(cards[insertIndex]);
+
+        if (x!=0)
+        {
+            switchItem=cards[insertIndex];
+            cards[insertIndex]=cards[x-1];
+            cards[x-1]=switchItem;
+        }
+    }
+
+    cardsinsert.classList.remove("hidden");
 }

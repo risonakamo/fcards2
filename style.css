@@ -5,8 +5,13 @@ body
     margin: 50px;
 }
 
-.fcards2
+.fcards
 {
-    position: absolute;
-    top: 1000px;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+
+.hidden
+{
+    opacity: 0;
 }
