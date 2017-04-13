@@ -3,12 +3,43 @@
 body
 {
     margin: 50px;
+    font-family: meiryo;
 }
 
 .fcards
 {
     transition-property: opacity;
     transition-duration: .5s;
+}
+
+.buttons-menu
+{
+    position: fixed;
+    width: 200px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+}
+
+.buttons-menu .button
+{
+    display: inline-block;
+    width: 90px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: rgba(191,191,191,0);
+    transition-property: background-color;
+    transition-duration: .2s;
+}
+
+.buttons-menu .button:hover
+{
+    background-color: rgba(191,191,191,.5);
 }
 
 .hidden

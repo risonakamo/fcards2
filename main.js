@@ -21,9 +21,11 @@ function main()
     };
     cardget.send();
 
-    setTimeout(()=>{
+    var resetbutton=document.querySelector(".reset");
+
+    resetbutton.addEventListener("click",()=>{
         appendCards();
-    },5000);
+    });
 }
 
 function loadCards(data)
@@ -49,21 +51,27 @@ function appendCards()
     var switchItem;
 
     cardsinsert.classList.add("hidden");
-    cardsinsert.innerHTML="";
+    setTimeout(()=>{
+        cardsinsert.innerHTML="";
 
-    for (var x=cards.length;x>=0;x--)
-    {
-        insertIndex=Math.floor(Math.random()*x);
-
-        cardsinsert.appendChild(cards[insertIndex]);
-
-        if (x!=0)
+        for (var x=cards.length;x>=0;x--)
         {
-            switchItem=cards[insertIndex];
-            cards[insertIndex]=cards[x-1];
-            cards[x-1]=switchItem;
-        }
-    }
+            insertIndex=Math.floor(Math.random()*x);
 
-    cardsinsert.classList.remove("hidden");
+            cards[insertIndex].hideReset();
+            cards[insertIndex].randomSwitch();
+
+            cardsinsert.appendChild(cards[insertIndex]);
+
+            if (x!=0)
+            {
+                switchItem=cards[insertIndex];
+                cards[insertIndex]=cards[x-1];
+                cards[x-1]=switchItem;
+            }
+        }
+
+        cardsinsert.classList.remove("hidden");
+        window.scroll(0,0);
+    },500);
 }
