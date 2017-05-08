@@ -1,0 +1,23 @@
+{
+    "boxes":[
+        ["おかし","snacks"],
+        ["おしょうがつ","new year"],
+        ["外国","foreign country"],
+        ["かしゅ","singer"],
+        ["こんがっき","this semester"],
+        ["しゃちょう","company pres"],
+        ["じゅぎょう","class"],
+        ["しょうらい","future"],
+        ["びじゅつかん","art museum"],
+        ["みずうみ","lake"],
+        ["うそをつく","to tell lie"],
+        ["おなかがすく","become hungry"],
+        ["そぼる","cut class"],
+        ["とる","take class, get grade"],
+        ["ならう","to learn"],
+        ["のぼる","to climb"],
+        ["働く","to work"],
+        ["りゅうがくする","study abroad"],
+        ["ちこくする","be late"]
+    ]
+}
