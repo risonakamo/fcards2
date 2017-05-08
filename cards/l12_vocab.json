@@ -1,0 +1,31 @@
+{
+    "boxes":[
+        ["foot","あし"],
+        ["気おん","temperature"],
+        ["くもり","cloud"],
+        ["しあい","match"],
+        ["ジュース","juice"],
+        ["せいじ","politics"],
+        ["せいせき","grade"],
+        ["せき","cough"],
+        ["は","tooth"],
+        ["はれ","sunny"],
+        ["ふつかよい","hangover"],
+        ["おおい","many"],
+        ["せまい","narrow"],
+        ["つごうがわるい","schedule conflict"],
+        ["あるく","to walk"],
+        ["きょうみがある","have interest in"],
+        ["なくす","to lose"],
+        ["ねつがある","have fever"],
+        ["のどがかわく","become thirsty"],
+        ["せきが出る","to cough"],
+        ["別れる","to break up"],
+        ["きんちょうする","to get nervous"],
+        ["しんぱいする","to worry"],
+        ["おだいじに","get well soon"],
+        ["できるだけ","as much as possible"],
+        ["度","degrees"],
+        ["二三日","2-3 days"]
+    ]
+}
