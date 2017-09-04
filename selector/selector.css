@@ -88,10 +88,10 @@ h1
 .links .link.white
 {
     background-color: transparent;
-    color: black;
+    color: #2b2b2b;
 }
 
 .links .link.white .line
 {
-    border-color: black;
+    border-color: #2b2b2b;
 }
