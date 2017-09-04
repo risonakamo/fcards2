@@ -1,16 +1,16 @@
 {
     "entries":[
-        ["a","lesson1a"],
-        ["a","lesson2"],
-        ["a","l4_location_kanji"],
-        ["a","l4_vocab"],
-        ["a","l5_vocab"],
-        ["a","l6_kanji"],
-        ["a","verbs"],
-        ["a","l7_kanji"],
-        ["a","l8_kanji"],
-        ["a","l6-9_vocab"],
+        ["lesson 1","lesson1a"],
+        ["lesson 2","lesson2"],
+        ["lesson 4 location kanji","l4_location_kanji"],
+        ["lesson 4 vocab","l4_vocab"],
+        ["lesson 5 vocab","l5_vocab"],
+        ["lesson 6 kanji","l6_kanji"],
+        ["random verbs","verbs"],
+        ["lesson 7 kanji","l7_kanji"],
+        ["lesson 8 kanji","l8_kanji"],
+        ["random vocab","l6-9_vocab"],
         ["lesson 10 kanji","l10_kanji"],
-        ["a","l11_kanji"]
+        ["lesson 11 kanji","l11_kanji"]
     ]
 }

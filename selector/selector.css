@@ -8,7 +8,7 @@ body
 
 .links
 {
-    width: 400px;
+    width: 550px;
     margin: auto;
     margin-top: 50px;
 }
@@ -16,8 +16,9 @@ body
 .links .link
 {
     display: block;
-    width: 400px;
+    width: 550px;
     height: 35px;
+    margin-bottom: 10px;
     background-color: #dd0012;
     color: white;
     text-decoration: none;
