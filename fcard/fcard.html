@@ -45,6 +45,7 @@ bottext
                 min-height: 100px;
                 padding: 10px;
                 box-sizing: border-box;
+                overflow-wrap: break-word;
                 transition-property: background-color;
                 transition-duration: .2s;
             }
@@ -101,7 +102,7 @@ bottext
         <div id="bottom" on-click="unhide" class="face hidden">
             <p>[[bottext]]</p>
         </div>
-        
+
     </template>
 
     <script>
@@ -115,7 +116,7 @@ bottext
             static get properties()
             {
                 return {
-                    
+
                 };
             }
 

@@ -34,6 +34,8 @@ body
     background-color: rgba(191,191,191,0);
     transition-property: background-color;
     transition-duration: .2s;
+    text-decoration: none;
+    color: black;
 }
 
 .buttons-menu .button:hover
