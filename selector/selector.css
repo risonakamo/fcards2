@@ -34,6 +34,7 @@ body
     vertical-align: middle;
     display: table-cell;
     font-size: 18px;
+    white-space: nowrap;
 }
 
 .link .line-holder

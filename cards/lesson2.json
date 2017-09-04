@@ -1,0 +1,33 @@
+{
+    "boxes":[
+        ["pencil","えんぴつ"],
+        ["sharp pencil","シャーペン"],
+        ["かさ","umbrella"],
+        ["かばん","bag"],
+        ["くつ","shoes"],
+        ["さいふ","wallet"],
+        ["ジーンス","jeans"],
+        ["じしょ","dictionary"],
+        ["じてんしゃ","bicycle"],
+        ["しんぶん","newspaper"],
+        ["シーデイー","cd"],
+        ["とけい","clock"],
+        ["トレーナー","trainer"],
+        ["ノート","note"],
+        ["ペン","pen"],
+        ["ぶんぼうぐや","stationary store"],
+        ["ぼうし","hat"],
+        ["ほん","book"],
+
+        ["さかな","fish"],
+        ["おてあらい","toilet"],
+
+        ["きっさてん","cafe"],
+        ["ぎんこう","bank"],
+        ["としょうかん","libray"],
+        ["ゆうびんきょく","post office"],
+
+        ["いくら","how much"],
+        ["やさい","vegetable"]
+    ]
+}
