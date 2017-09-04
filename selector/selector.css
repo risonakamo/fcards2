@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+body
+{
+    margin: 0;
+    font-size: 0;
+}
+
+.links
+{
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.links .link
+{
+    display: block;
+    width: 400px;
+    height: 35px;
+    background-color: #dd0012;
+    color: white;
+    text-decoration: none;
+}
+
+.links .link:hover>div
+{
+    opacity: .7;
+}
+
+.link>div
+{
+    height: 35px;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 18px;
+}
+
+.link .line-holder
+{
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+    font-size: 0;
+}
+
+.line-holder .line
+{
+    display: inline-block;
+    width: 90%;
+    height: 50%;
+    border-bottom: 1px solid white;
+}
+
+.link .title
+{
+    padding-left: 10px;
+}
+
+.link .filename
+{
+    padding-right: 10px;
+}
+
+.links .link.white
+{
+    background-color: transparent;
+    color: black;
+}
+
+.links .link.white .line
+{
+    border-color: black;
+}
