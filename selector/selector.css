@@ -1,9 +1,29 @@
 @charset "UTF-8";
 
+@font-face
+{
+    font-family: "osb";
+    src: url("osb.otf") format("opentype");
+}
+
 body
 {
     margin: 0;
     font-size: 0;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: "osb";
+    margin: 50px 0 0 0;
+    letter-spacing: 4px;
+}
+
+.blue
+{
+    color: #1C7FE8;
 }
 
 .links
@@ -19,7 +39,8 @@ body
     width: 550px;
     height: 35px;
     margin-bottom: 10px;
-    background-color: #dd0012;
+    /*background-color: #dd0012;*/
+    background-color: #db4437;
     color: white;
     text-decoration: none;
 }
