@@ -4,3 +4,68 @@ body
 {
     margin: 0;
 }
+
+textarea
+{
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    padding: 0;
+    border: none;
+    resize: none;
+    z-index: 10;
+}
+
+textarea:focus
+{
+    outline: none;
+}
+
+.input-area
+{
+    border-bottom: 1px dotted black;
+}
+
+.output-box
+{
+    position: relative;
+    width: 500px;
+    margin: auto;
+    transition: height .2s;
+}
+
+.output-box .cover
+{
+    opacity: 0;
+    z-index: -10;
+}
+
+.output-box.small .cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1C7FE8;
+    opacity: 1;
+    z-index: 10;
+    transition: opacity .2s;
+}
+
+.output-box.small
+{
+    height: 80px;
+}
+
+.output-box.small .output-area
+{
+    height: 80px;
+    z-index: -10;
+}
+
+.output-box .output-area
+{
+    transition: height .2s;
+}
