@@ -3,6 +3,7 @@
 body
 {
     margin: 0;
+    font-family: meiryo;
 }
 
 textarea
@@ -15,6 +16,7 @@ textarea
     border: none;
     resize: none;
     z-index: 10;
+    background-color: transparent;
 }
 
 textarea:focus
@@ -37,21 +39,25 @@ textarea:focus
 
 .output-box .cover
 {
-    opacity: 0;
-    z-index: -10;
-}
-
-.output-box.small .cover
-{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #1C7FE8;
+    opacity: 0;
+    z-index: -10;
+    text-align: center;
+    transition: opacity .5s;
+    padding-top: 27px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.output-box.small .cover
+{
     opacity: 1;
     z-index: 10;
-    transition: opacity .2s;
 }
 
 .output-box.small
