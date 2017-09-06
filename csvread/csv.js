@@ -28,5 +28,5 @@ function parseInput()
 
     }
 
-    return JSON.stringify({cards:data});
+    return JSON.stringify({boxes:data});
 }
