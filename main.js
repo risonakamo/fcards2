@@ -27,6 +27,12 @@ function main()
     resetbutton.addEventListener("click",()=>{
         appendCards();
     });
+
+    var rmodeBtn=document.querySelector(".random-mode");
+    rmodeBtn.addEventListener("click",(e)=>{
+        toggleRandomMode();
+        rmodeBtn.innerHTML=`R-MODE: ${_randomMode}`;
+    });
 }
 
 function loadCards(data)
