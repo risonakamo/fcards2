@@ -113,6 +113,16 @@ bottext
                 return"f-card";
             }
 
+            /*
+                --- bind variables ---
+                string toptext
+                string bottext
+
+                --- variables ---
+                string sToptext
+                string sBottext
+                int randomMode
+            */
             static get properties()
             {
                 return {
@@ -120,10 +130,22 @@ bottext
                 };
             }
 
+            constructor(top,bot)
+            {
+                super();
+
+                this.sToptext=top;
+                this.sBottext=bot;
+
+                this.randomMode=0;
+            }
+
             ready()
             {
                 super.ready();
 
+                this.toptext=this.sToptext;
+                this.bottext=this.sBottext;
                 this.randomSwitch();
             }
 
@@ -140,17 +162,39 @@ bottext
 
             randomSwitch()
             {
-                if (Math.floor(Math.random()*2))
+                if (this.randomMode==1)
                 {
-                    var a=this.toptext;
-                    this.toptext=this.bottext;
-                    this.bottext=a;
+                    this.toptext=this.sToptext;
+                    this.bottext=this.sBottext;
+                }
+
+                else if (this.randomMode==2)
+                {
+                    this.toptext=this.sBottext;
+                    this.bottext=this.sToptext;
+                }
+
+                else
+                {
+                    if (Math.floor(Math.random()*2))
+                    {
+                        var a=this.toptext;
+                        this.toptext=this.bottext;
+                        this.bottext=a;
+                    }
                 }
             }
 
             hideReset()
             {
                 this.$.bottom.classList.add("hidden");
+            }
+
+            changeRandommode(mode)
+            {
+                this.randomMode=mode;
+
+                this.randomSwitch();
             }
         }
 
