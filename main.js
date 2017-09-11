@@ -1,6 +1,7 @@
 window.onload=main;
 
 var cards=[];
+var _randomMode=0;
 function main()
 {
     var loadfile=window.location.hash.split("#");
@@ -72,4 +73,20 @@ function appendCards()
         cardsinsert.classList.remove("hidden");
         window.scroll(0,0);
     },500);
+}
+
+function toggleRandomMode()
+{
+    _randomMode++;
+
+    if (_randomMode>2)
+    {
+        _randomMode=0;
+    }
+
+    console.log(`randomiser mode: ${_randomMode}`);
+    for (var x=0,l=cards.length;x<l;x++)
+    {
+        cards[x].changeRandommode(_randomMode);
+    }
 }
