@@ -130,12 +130,17 @@ bottext
                 };
             }
 
-            constructor(top,bot)
+            constructor(data)
             {
                 super();
 
-                this.sToptext=top;
-                this.sBottext=bot;
+                this.sToptext=data[0];
+                this.sBottext=data[1];
+
+                if (data.length>2)
+                {
+                    this.furigana=data[2];
+                }
 
                 this.randomMode=0;
             }

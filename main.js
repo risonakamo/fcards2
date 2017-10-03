@@ -41,7 +41,7 @@ function loadCards(data)
 
     for (var x=0;x<data.boxes.length;x++)
     {
-        newcard=new fCard(data.boxes[x][0],data.boxes[x][1]);
+        newcard=new fCard(data.boxes[x]);
 
         cards.push(newcard);
     }
