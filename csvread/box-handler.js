@@ -45,6 +45,13 @@ class _boxhandler
                     data[x][y]=data[x][y].slice(1,-1);
                 }
             }
+
+            if (data[x].length>2)
+            {
+                var furigana=data[x].slice(2);
+                data[x]=data[x].slice(0,2);
+                data[x].push(furigana);
+            }
         }
 
         return JSON.stringify({boxes:data});
