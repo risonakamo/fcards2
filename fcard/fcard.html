@@ -96,11 +96,11 @@ bottext
 
         <div id="top" class="face face-top">
             <div on-click="cmark" id="markbutton"></div>
-            <p>[[toptext]]</p>
+            <p id="toptext"></p>
         </div>
 
         <div id="bottom" on-click="unhide" class="face hidden">
-            <p>[[bottext]]</p>
+            <p id="bottext"></p>
         </div>
 
     </template>
@@ -114,13 +114,10 @@ bottext
             }
 
             /*
-                --- bind variables ---
-                string toptext
-                string bottext
-
                 --- variables ---
-                string sToptext
+                string sToptext: saved top text
                 string sBottext
+                string-array furigana
                 int randomMode
             */
             static get properties()
@@ -140,6 +137,7 @@ bottext
                 if (data.length>2)
                 {
                     this.furigana=data[2];
+                    this.processFurigana();
                 }
 
                 this.randomMode=0;
@@ -149,8 +147,8 @@ bottext
             {
                 super.ready();
 
-                this.toptext=this.sToptext;
-                this.bottext=this.sBottext;
+                this.$.toptext.innerHTML=this.sToptext;
+                this.$.bottext.innerHTML=this.sBottext;
                 this.randomSwitch();
             }
 
@@ -169,23 +167,23 @@ bottext
             {
                 if (this.randomMode==1)
                 {
-                    this.toptext=this.sToptext;
-                    this.bottext=this.sBottext;
+                    this.$.toptext.innerHTML=this.sToptext;
+                    this.$.bottext.innerHTML=this.sBottext;
                 }
 
                 else if (this.randomMode==2)
                 {
-                    this.toptext=this.sBottext;
-                    this.bottext=this.sToptext;
+                    this.$.toptext.innerHTML=this.sBottext;
+                    this.$.bottext.innerHTML=this.sToptext;
                 }
 
                 else
                 {
                     if (Math.floor(Math.random()*2))
                     {
-                        var a=this.toptext;
-                        this.toptext=this.bottext;
-                        this.bottext=a;
+                        var a=this.$.toptext.innerHTML;
+                        this.$.toptext.innerHTML=this.$.bottext.innerHTML;
+                        this.$.bottext.innerHTML=a;
                     }
                 }
             }
@@ -205,6 +203,17 @@ bottext
                 this.randomMode=mode;
 
                 this.randomSwitch();
+            }
+
+            processFurigana()
+            {
+                var kanjisplit=this.sToptext.split("");
+                for (var x=0;x<this.furigana.length;x+=2)
+                {
+                    kanjisplit[this.furigana[x]]+=`<rt>${this.furigana[x+1]}</rt>`;
+                }
+
+                this.sToptext=`<ruby>${kanjisplit.join("")}</ruby>`;
             }
         }
 
