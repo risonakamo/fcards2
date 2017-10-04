@@ -148,6 +148,7 @@ footer > div
     text-align: center;
     user-select: none;
     cursor: pointer;
+    transition: border-color .2s,color .2s;
 }
 
 .footer-square.home
@@ -165,6 +166,7 @@ footer > div
 {
     width: 150px;
     height: 60px;
+    transition: color .2s;
 }
 
 .square-info.csv
@@ -175,6 +177,26 @@ footer > div
 .square-info.home
 {
     padding-left: 30px;
+}
+
+footer.home .square-info.home
+{
+    color: white;
+}
+
+footer.home .square-info.home .line
+{
+    border-color: white;
+}
+
+footer.csv .square-info.csv
+{
+    color: white;
+}
+
+footer.csv .square-info.csv .line
+{
+    border-color: white;
 }
 
 .square-info > div
@@ -201,4 +223,5 @@ footer > div
     width: 90%;
     height: 30px;
     border-bottom: 1px solid black;
+    transition: border-color .2s;
 }

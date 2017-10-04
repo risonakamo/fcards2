@@ -3,6 +3,7 @@ window.onload=main;
 function main()
 {
     getCardList();
+    applySquareInfoFade();
 }
 
 function getCardList()
@@ -50,4 +51,26 @@ function genEntry(name,filename,white)
     </div>
     <div class="filename">${filename}</div>
     </a>`;
+}
+
+function applySquareInfoFade()
+{
+    var squareBoxes=document.querySelectorAll(".footer-square");
+    var footer=document.querySelector("footer");
+
+    squareBoxes[0].addEventListener("mouseenter",(e)=>{
+        footer.classList.add("home");
+    });
+
+    squareBoxes[0].addEventListener("mouseleave",(e)=>{
+        footer.classList.remove("home");
+    });
+
+    squareBoxes[1].addEventListener("mouseenter",(e)=>{
+        footer.classList.add("csv");
+    });
+
+    squareBoxes[1].addEventListener("mouseleave",(e)=>{
+        footer.classList.remove("csv");
+    });
 }
