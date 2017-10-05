@@ -122,7 +122,6 @@ bottext
                 --- variables ---
                 string sToptext: saved top text
                 string sBottext
-                string-array furigana
                 int randomMode
             */
             static get properties()
@@ -141,14 +140,14 @@ bottext
 
                 if (data.length>2)
                 {
-                    this.furigana={};
+                    var furigana={};
 
                     for (var x=0;x<data[2].length;x+=2)
                     {
-                        this.furigana[data[2][x]]=data[2][x+1];
+                        furigana[data[2][x]]=data[2][x+1];
                     }
 
-                    this.processFurigana();
+                    this.processFurigana(furigana);
                 }
 
                 this.randomMode=0;
@@ -216,14 +215,14 @@ bottext
                 this.randomSwitch();
             }
 
-            processFurigana()
+            processFurigana(furigana)
             {
                 var kanjisplit=this.sToptext.split("");
                 for (var x=0;x<kanjisplit.length;x++)
                 {
-                    if (this.furigana[x]!=undefined)
+                    if (furigana[x]!=undefined)
                     {
-                        kanjisplit[x]+=`<rt>${this.furigana[x]}</rt>`;
+                        kanjisplit[x]+=`<rt>${furigana[x]}</rt>`;
                     }
 
                     else
