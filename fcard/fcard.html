@@ -34,6 +34,11 @@ bottext
                 transition-duration: .2s;
             }
 
+            rt
+            {
+                font-size: 15px;
+            }
+
             .face-top
             {
                 border-bottom-style: dotted;
@@ -136,7 +141,13 @@ bottext
 
                 if (data.length>2)
                 {
-                    this.furigana=data[2];
+                    this.furigana={};
+
+                    for (var x=0;x<data[2].length;x+=2)
+                    {
+                        this.furigana[data[2][x]]=data[2][x+1];
+                    }
+
                     this.processFurigana();
                 }
 
@@ -208,9 +219,17 @@ bottext
             processFurigana()
             {
                 var kanjisplit=this.sToptext.split("");
-                for (var x=0;x<this.furigana.length;x+=2)
+                for (var x=0;x<kanjisplit.length;x++)
                 {
-                    kanjisplit[this.furigana[x]]+=`<rt>${this.furigana[x+1]}</rt>`;
+                    if (this.furigana[x]!=undefined)
+                    {
+                        kanjisplit[x]+=`<rt>${this.furigana[x]}</rt>`;
+                    }
+
+                    else
+                    {
+                        kanjisplit[x]+="<rt></rt>";
+                    }
                 }
 
                 this.sToptext=`<ruby>${kanjisplit.join("")}</ruby>`;
