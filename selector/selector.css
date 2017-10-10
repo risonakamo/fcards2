@@ -6,10 +6,18 @@
     src: url("osb.otf") format("opentype");
 }
 
+html
+{
+    height: 100%;
+}
+
 body
 {
+    position: relative;
+    min-height: 100%;
     margin: 0;
     font-size: 0;
+    padding-bottom: 110px;
 }
 
 h1
@@ -17,8 +25,14 @@ h1
     text-align: center;
     font-size: 30px;
     font-family: "osb";
-    margin: 50px 0 0 0;
+    padding: 50px 0 0 0;
+    margin: 0;
     letter-spacing: 4px;
+}
+
+a
+{
+    text-decoration: none;
 }
 
 .blue
@@ -94,4 +108,120 @@ h1
 .links .link.white .line
 {
     border-color: #2b2b2b;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #db4437;
+    text-align: center;
+}
+
+footer > div
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-squares
+{
+    height: 60px;
+    width: 120px;
+    text-align: center;
+    padding-top: 9px;
+    box-sizing: border-box;
+}
+
+.footer-square
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: black;
+    border: 6px solid black;
+    font-size: 24px;
+    font-family: "osb";
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: border-color .2s,color .2s;
+}
+
+.footer-square.home
+{
+    margin-right: 10px;
+}
+
+.footer-square:hover
+{
+    border-color: white;
+    color: white;
+}
+
+.square-info
+{
+    width: 150px;
+    height: 60px;
+    transition: color .2s;
+}
+
+.square-info.csv
+{
+    width: 180px;
+}
+
+.square-info.home
+{
+    padding-left: 30px;
+}
+
+footer.home .square-info.home
+{
+    color: white;
+}
+
+footer.home .square-info.home .line
+{
+    border-color: white;
+}
+
+footer.csv .square-info.csv
+{
+    color: white;
+}
+
+footer.csv .square-info.csv .line
+{
+    border-color: white;
+}
+
+.square-info > div
+{
+    display: table-cell;
+    height: 60px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.square-info .label
+{
+    padding: 0 5px 0 5px;
+}
+
+.square-info .line-holder
+{
+    width: 100%;
+    vertical-align: top;
+}
+
+.square-info .line
+{
+    width: 90%;
+    height: 30px;
+    border-bottom: 1px solid black;
+    transition: border-color .2s;
 }
