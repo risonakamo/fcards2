@@ -255,6 +255,30 @@
         [
             "aic",
             "availability, integrity, confidentiality"
+        ],
+        [
+            "mythical man month",
+            "adding more people to a late project makes it later"
+        ],
+        [
+            "2nd system effect",
+            "a mans 2nd system is the most dangerous"
+        ],
+        [
+            "plan 1 to throw away",
+            "fixing a super broken product can be more expensive than redoing it"
+        ],
+        [
+            "agile manifesto",
+            "talk a lot, continuous release of software, self organising teams"
+        ],
+        [
+            "no silver bullet",
+            "no good process, language, whatever for every task ever"
+        ],
+        [
+            "cathedral and bazaar",
+            "cathedral: source code is for everyone but only certain people will actually modify, bazaar: made by linux guy, internet develops something, turns into cancer, or not"
         ]
     ]
 }
