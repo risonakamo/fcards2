@@ -1,0 +1,260 @@
+{
+    "boxes": [
+        [
+            "most popular languages",
+            "c, java"
+        ],
+        [
+            "acceptable loc/error",
+            "1000"
+        ],
+        [
+            "SDLC",
+            "software development life cycle"
+        ],
+        [
+            "5 stages of sdlc",
+            "requirements, design, development, testing, delivery/maintence"
+        ],
+        [
+            "2 types of software design",
+            "agile, not agile"
+        ],
+        [
+            "2 reasons why projects fail",
+            "poor requirements, poor management"
+        ],
+        [
+            "non practical software model",
+            "waterfall"
+        ],
+        [
+            "government's model",
+            "v model"
+        ],
+        [
+            "builds and tests in small pieces",
+            "incremental"
+        ],
+        [
+            "cyclic process model",
+            "spiral"
+        ],
+        [
+            "sprints, integration, end to end features model",
+            "agile"
+        ],
+        [
+            "pigs/chickens model",
+            "committed scrum"
+        ],
+        [
+            "what are pigs",
+            "managers"
+        ],
+        [
+            "test driven, pairs, short dev cycles",
+            "extreme programming"
+        ],
+        [
+            "risk model driven, short iteration",
+            "feature driven"
+        ],
+        [
+            "platinum rule",
+            "treat others how they want to be treated"
+        ],
+        [
+            "4 styles of platinum rule",
+            "DSRT: director, socialiser, relator, thinker"
+        ],
+        [
+            "what makes a good requirement",
+            "verifyable, testable, tracable, consistent"
+        ],
+        [
+            "what do requirements tell you",
+            "what youre doing, when youre done"
+        ],
+        [
+            "ssr",
+            "system specification review"
+        ],
+        [
+            "srs",
+            "system requirements specification"
+        ],
+        [
+            "csci",
+            "computer software configuration item"
+        ],
+        [
+            "cdr",
+            "critical design review"
+        ],
+        [
+            "pdr",
+            "preliminary design review"
+        ],
+        [
+            "sdr",
+            "system design review"
+        ],
+        [
+            "srr",
+            "system requirements review"
+        ],
+        [
+            "ssr",
+            "software specification review"
+        ],
+        [
+            "trr",
+            "test readiness review"
+        ],
+        [
+            "cir",
+            "code inspection report"
+        ],
+        [
+            "sdd",
+            "system design document"
+        ],
+        [
+            "am",
+            "administrator manual"
+        ],
+        [
+            "tr",
+            "testing report"
+        ],
+        [
+            "uidd",
+            "user interface design document"
+        ],
+        [
+            "order of review documents",
+            "srr, sdr, ssr, pdr, cdr"
+        ],
+        [
+            "order of documents",
+            "srs, sdd, uidd, cir, tr/trr, am"
+        ],
+        [
+            "uml",
+            "unified markup language"
+        ],
+        [
+            "what does uml state diagram show",
+            "states and transitions to states"
+        ],
+        [
+            "what do use case represent in uml diagram",
+            "a path through uml or a scenario"
+        ],
+        [
+            "code unit",
+            "smallest piece of code"
+        ],
+        [
+            "gui",
+            "graphic user interface"
+        ],
+        [
+            "why find faults early",
+            "saves time and money"
+        ],
+        [
+            "case (CAD)",
+            "computer aided software engineering"
+        ],
+        [
+            "csc",
+            "computer software component"
+        ],
+        [
+            "csu",
+            "computer software unit"
+        ],
+        [
+            "4 levels of testing",
+            "unit, integration, system, acceptance"
+        ],
+        [
+            "defect testing",
+            "testing for problems"
+        ],
+        [
+            "validation testing",
+            "testing for performance"
+        ],
+        [
+            "iv&v",
+            "independent verification/validation"
+        ],
+        [
+            "integration patterns for testing",
+            "topdown, bottomup, sandwich"
+        ],
+        [
+            "regression testing",
+            "testing after change has been made"
+        ],
+        [
+            "3 areas of risk",
+            "performance, schedule, cost"
+        ],
+        [
+            "actions of risk",
+            "idenify, analyse, track, communicate"
+        ],
+        [
+            "measurements of risk",
+            "impact, likelyhood"
+        ],
+        [
+            "common size estimations",
+            "KLOC, function points, file size"
+        ],
+        [
+            "FP",
+            "function point"
+        ],
+        [
+            "resource estimating",
+            "trying to estimate resources needed to get job done"
+        ],
+        [
+            "estimating rule of thumb",
+            "duration=3*effort^1/3"
+        ],
+        [
+            "sqa",
+            "software quality assurance"
+        ],
+        [
+            "ipr",
+            "informal peer review"
+        ],
+        [
+            "cmmi",
+            "capability maturity model integration"
+        ],
+        [
+            "5 levels of cmmi",
+            "initial, repeatable, defined, managed, optimising"
+        ],
+        [
+            "5 pillars of ia",
+            "aic + authenticity, nonrepudiation"
+        ],
+        [
+            "pki",
+            "public key infrastructure"
+        ],
+        [
+            "aic",
+            "availability, integrity, confidentiality"
+        ]
+    ]
+}
