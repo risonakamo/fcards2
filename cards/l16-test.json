@@ -1,1 +1,88 @@
-{"boxes":[["person‚ğsomewhere‚É‚Â‚ê‚Äs‚­","take someone somewhere"],["something‚ªŒ©‚Â‚©‚é","found something"],["something‚ğŒ©‚Â‚¯‚é","find something"],["something‚ğlanguage‚É‚â‚­‚·","translate something into language"],["someone‚Ésomething‚ğ‹³‚¦‚é","teach someone something"],["—¯Šw‚·‚é","‚è‚ã‚ª‚­‚·‚é"],["someone‚Ésomething‚ğŒ©‚¹‚é","show something to someone"],["person‚Éplace‚ğ‚ ‚ñ‚È‚¢‚·‚é","show person around place"],["somewhere‚Ésomeone‚ğ‚Ş‚©‚¦‚És‚­","go somewhere to pick someone up"],["something‚É‚«‚å‚¤–¡‚ª‚ ‚é","have interest in something"],["someone‚Ésomething‚ğ‚¨‚²‚é","treat someone to something"],["‚·‚¢‚¹‚ñ‚¶‚å‚¤","letter of recommendation"],["ğ–é","‚³‚­‚â"],["’©‚Ë‚Ú‚¤‚·‚é","oversleep"],["—L–¼‚È","‚ä‚¤‚ß‚¢‚È"],["‚Ô‚ñ‚©","culture"],["“¹‚É‚Ü‚æ‚¤","get lost"],["vehicle‚Éæ‚è‚­‚ê‚é","miss the vehicle"],["someone‚Ésomething‚ğ‚·‚©","lend something to someone"],["shortform‚Æ‚¢‚¢‚ñ‚Å‚·","hope for self"],["shortform‚Æ‚¢‚¢‚Å‚·","hope for someone else"]]}
+{
+    "boxes": [
+        [
+            "personã‚’somewhereã«ã¤ã‚Œã¦è¡Œã",
+            "take someone somewhere"
+        ],
+        [
+            "somethingãŒè¦‹ã¤ã‹ã‚‹",
+            "found something"
+        ],
+        [
+            "somethingã‚’è¦‹ã¤ã‘ã‚‹",
+            "find something"
+        ],
+        [
+            "somethingã‚’languageã«ã‚„ãã™",
+            "translate something into language"
+        ],
+        [
+            "someoneã«somethingã‚’æ•™ãˆã‚‹",
+            "teach someone something"
+        ],
+        [
+            "ç•™å­¦ã™ã‚‹",
+            "ã‚Šã‚…ãŒãã™ã‚‹"
+        ],
+        [
+            "someoneã«somethingã‚’è¦‹ã›ã‚‹",
+            "show something to someone"
+        ],
+        [
+            "personã«placeã‚’ã‚ã‚“ãªã„ã™ã‚‹",
+            "show person around place"
+        ],
+        [
+            "somewhereã«someoneã‚’ã‚€ã‹ãˆã«è¡Œã",
+            "go somewhere to pick someone up"
+        ],
+        [
+            "somethingã«ãã‚‡ã†å‘³ãŒã‚ã‚‹",
+            "have interest in something"
+        ],
+        [
+            "someoneã«somethingã‚’ãŠã”ã‚‹",
+            "treat someone to something"
+        ],
+        [
+            "ã™ã„ã›ã‚“ã˜ã‚‡ã†",
+            "letter of recommendation"
+        ],
+        [
+            "æ˜¨å¤œ",
+            "ã•ãã‚„"
+        ],
+        [
+            "æœã­ã¼ã†ã™ã‚‹",
+            "oversleep"
+        ],
+        [
+            "æœ‰åãª",
+            "ã‚†ã†ã‚ã„ãª"
+        ],
+        [
+            "ã¶ã‚“ã‹",
+            "culture"
+        ],
+        [
+            "é“ã«ã¾ã‚ˆã†",
+            "get lost"
+        ],
+        [
+            "vehicleã«ä¹—ã‚Šãã‚Œã‚‹",
+            "miss the vehicle"
+        ],
+        [
+            "someoneã«somethingã‚’ã™ã‹",
+            "lend something to someone"
+        ],
+        [
+            "shortformã¨ã„ã„ã‚“ã§ã™",
+            "hope for self"
+        ],
+        [
+            "shortformã¨ã„ã„ã§ã™",
+            "hope for someone else"
+        ]
+    ]
+}
