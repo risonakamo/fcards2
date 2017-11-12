@@ -11,16 +11,7 @@ function main()
         return;
     }
 
-    var cardget=new XMLHttpRequest();
-    cardget.open("get","cards/"+loadfile[1]+".json");
-    cardget.responseType="json";
-    cardget.onreadystatechange=()=>{
-        if (cardget.readyState==4)
-        {
-            loadCards(cardget.response);
-        }
-    };
-    cardget.send();
+    getCards(loadfile);
 
     var resetbutton=document.querySelector(".reset");
 
@@ -35,6 +26,24 @@ function main()
     });
 }
 
+function getCards(loadfile)
+{
+    var cardget=new XMLHttpRequest();
+
+    cardget.open("GET","cards/"+loadfile[1]+".json");
+
+    cardget.responseType="json";
+
+    cardget.onreadystatechange=()=>{
+        if (cardget.readyState==4)
+        {
+            loadCards(cardget.response);
+        }
+    };
+
+    cardget.send();
+}
+
 function loadCards(data)
 {
     var newcard;
@@ -47,6 +56,8 @@ function loadCards(data)
     }
 
     appendCards();
+
+    var kControl=new _kController;
 }
 
 function appendCards()
