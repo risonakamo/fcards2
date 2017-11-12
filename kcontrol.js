@@ -24,6 +24,7 @@ class _kController
             if (e.key=="Enter")
             {
                 this.currentBox.unhide();
+                this.select(this.icurrentBox-1);
             }
         });
     }
@@ -43,5 +44,28 @@ class _kController
         this.currentBox=cards[this.icurrentBox];
 
         this.currentBox.classList.add("kselect");
+
+        if (!this.inViewport())
+        {
+            this.currentBox.scrollIntoView();
+            window.scrollBy(0,-50);
+        }
+    }
+
+    //returns bool on if currentBox is in viewport
+    inViewport()
+    {
+        var vtop=window.scrollY;
+        var vbot=vtop+window.innerHeight;
+
+        var etop=this.currentBox.offsetTop;
+        var ebot=etop+this.currentBox.offsetHeight;
+
+        if (vbot-ebot<0 || etop-vtop<0)
+        {
+            return 0;
+        }
+
+        return 1;
     }
 }

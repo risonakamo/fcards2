@@ -2,6 +2,8 @@ window.onload=main;
 
 var cards=[];
 var _randomMode=0;
+var kControl;
+
 function main()
 {
     var loadfile=window.location.hash.split("#");
@@ -57,7 +59,7 @@ function loadCards(data)
 
     appendCards();
 
-    var kControl=new _kController;
+    kControl=new _kController;
 }
 
 function appendCards()
