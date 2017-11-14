@@ -1,8 +1,10 @@
 window.onload=main;
 
 var cards=[];
-var _randomMode=0;
 var kControl;
+
+var _rmodeBtn;
+var _randomMode=0;
 
 function main()
 {
@@ -21,10 +23,9 @@ function main()
         appendCards();
     });
 
-    var rmodeBtn=document.querySelector(".random-mode");
-    rmodeBtn.addEventListener("click",(e)=>{
+    _rmodeBtn=document.querySelector(".random-mode");
+    _rmodeBtn.addEventListener("click",(e)=>{
         toggleRandomMode();
-        rmodeBtn.innerHTML=`R-MODE: ${_randomMode}`;
     });
 }
 
@@ -113,4 +114,6 @@ function toggleRandomMode()
     {
         cards[x].changeRandommode(_randomMode);
     }
+
+    _rmodeBtn.innerHTML=`R-<span class="key">M</span>ODE: ${_randomMode}`;
 }

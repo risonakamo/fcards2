@@ -1,10 +1,12 @@
 class _kController
 {
-    /*int icurrentBox=index of current box
-      element currentBox=element of current box*/
+    /*int icurrentBox: index of current box
+      int usedKeys: bool if user has used keycontrol yet (0=nope)
+      element currentBox: element of current box*/
     constructor()
     {
         this.icurrentBox=-1;
+        this.usedKeys=0;
 
         this.setupKeys();
     }
@@ -12,6 +14,11 @@ class _kController
     setupKeys()
     {
         document.addEventListener("keydown",(e)=>{
+            if (!this.usedKeys)
+            {
+                document.querySelector(".buttons-menu").classList.add("keyboard-mode");
+            }
+
             if (e.key=="ArrowRight")
             {
                 this.navigate(-1);
@@ -35,6 +42,11 @@ class _kController
             if (e.key=="r")
             {
                 appendCards();
+            }
+
+            if (e.key=="m")
+            {
+                toggleRandomMode();
             }
         });
     }

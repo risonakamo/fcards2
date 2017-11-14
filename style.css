@@ -35,11 +35,17 @@ body
     transition-duration: .2s;
     text-decoration: none;
     color: black;
+    font-family: roboto;
 }
 
 .buttons-menu .button:hover
 {
     background-color: rgba(191,191,191,.5);
+}
+
+.buttons-menu.keyboard-mode .button .key
+{
+    font-weight: bold;
 }
 
 .hidden
