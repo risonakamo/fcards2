@@ -2,8 +2,7 @@ class _kController
 {
     constructor()
     {
-        this.icurrentBox=cards.length-1;
-        this.currentBox=cards[this.icurrentBox];
+        this.icurrentBox=-1;
 
         this.setupKeys();
     }
@@ -13,18 +12,22 @@ class _kController
         document.addEventListener("keydown",(e)=>{
             if (e.key=="ArrowRight")
             {
-                this.select(this.icurrentBox-1);
+                this.navigate(-1);
             }
 
             if (e.key=="ArrowLeft")
             {
-                this.select(this.icurrentBox+1);
+                this.navigate(1);
             }
 
-            if (e.key=="Enter")
+            if (e.key=="Enter" || e.key=="Space")
             {
-                this.currentBox.unhide();
-                this.select(this.icurrentBox-1);
+                if (this.currentBox)
+                {
+                    this.currentBox.unhide();
+                }
+
+                this.navigate(-1);
             }
         });
     }
@@ -38,21 +41,27 @@ class _kController
             return;
         }
 
-        this.currentBox.classList.remove("kselect");
+        if (this.currentBox)
+        {
+            this.currentBox.classList.remove("kselect");
+        }
 
         this.icurrentBox=box;
         this.currentBox=cards[this.icurrentBox];
 
         this.currentBox.classList.add("kselect");
 
-        if (!this.inViewport())
+        if (this.inViewport()<=0)
         {
             this.currentBox.scrollIntoView();
             window.scrollBy(0,-50);
         }
     }
 
-    //returns bool on if currentBox is in viewport
+    //returns int on if currentBox is in viewport
+    //-1: completely out of viewport
+    //0: partially not in viewport
+    //1: in viewport
     inViewport()
     {
         var vtop=window.scrollY;
@@ -61,11 +70,49 @@ class _kController
         var etop=this.currentBox.offsetTop;
         var ebot=etop+this.currentBox.offsetHeight;
 
-        if (vbot-ebot<0 || etop-vtop<0)
+        if (ebot<vtop || etop>vbot)
+        {
+            return -1;
+        }
+
+        if (vbot<ebot || etop<vtop)
         {
             return 0;
         }
 
         return 1;
+    }
+
+    //immediately select the topmost leftmost visible box
+    jumpVisible()
+    {
+        var visibleTop=window.scrollY;
+
+        for (var x=0,l=cards.length;x<l;x++)
+        {
+            if (cards[x].offsetTop<visibleTop)
+            {
+                this.select(x-1);
+                return;
+            }
+        }
+
+        this.select(cards.length-1);
+    }
+
+    //perform navigation in given direction
+    //if a selected card is not onscreen jump to
+    //topmost visible using jumpVisible
+    navigate(direction)
+    {
+        if (this.icurrentBox==-1 || this.inViewport()==-1)
+        {
+            this.jumpVisible();
+        }
+
+        else
+        {
+            this.select(this.icurrentBox+direction);
+        }
     }
 }
