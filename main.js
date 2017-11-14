@@ -68,6 +68,11 @@ function appendCards()
     var insertIndex;
     var switchItem;
 
+    if (kControl)
+    {
+        kControl.resetSelect();
+    }
+
     cardsinsert.classList.add("hidden");
     setTimeout(()=>{
         cardsinsert.innerHTML="";

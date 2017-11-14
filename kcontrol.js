@@ -1,5 +1,7 @@
 class _kController
 {
+    /*int icurrentBox=index of current box
+      element currentBox=element of current box*/
     constructor()
     {
         this.icurrentBox=-1;
@@ -28,6 +30,11 @@ class _kController
                 }
 
                 this.navigate(-1);
+            }
+
+            if (e.key=="r")
+            {
+                appendCards();
             }
         });
     }
@@ -114,5 +121,17 @@ class _kController
         {
             this.select(this.icurrentBox+direction);
         }
+    }
+
+    //unselect anything selected
+    resetSelect()
+    {
+        if (this.currentBox)
+        {
+            this.currentBox.classList.remove("kselect");
+        }
+
+        this.icurrentBox=-1;
+        delete this.currentBox;
     }
 }
