@@ -3,6 +3,8 @@ window.onload=main;
 var cards=[];
 var kControl;
 
+var _cardsinsert;
+
 var _rmodeBtn;
 var _randomMode=0;
 
@@ -65,7 +67,7 @@ function loadCards(data)
 
 function appendCards()
 {
-    var cardsinsert=document.querySelector(".fcards");
+    _cardsinsert=document.querySelector(".fcards");
     var insertIndex;
     var switchItem;
 
@@ -74,9 +76,9 @@ function appendCards()
         kControl.resetSelect();
     }
 
-    cardsinsert.classList.add("hidden");
+    _cardsinsert.classList.add("hidden");
     setTimeout(()=>{
-        cardsinsert.innerHTML="";
+        _cardsinsert.innerHTML="";
 
         for (var x=cards.length;x>=0;x--)
         {
@@ -85,7 +87,7 @@ function appendCards()
             cards[insertIndex].hideReset();
             cards[insertIndex].randomSwitch();
 
-            cardsinsert.appendChild(cards[insertIndex]);
+            _cardsinsert.appendChild(cards[insertIndex]);
 
             if (x!=0)
             {
@@ -95,7 +97,7 @@ function appendCards()
             }
         }
 
-        cardsinsert.classList.remove("hidden");
+        _cardsinsert.classList.remove("hidden");
         window.scroll(0,0);
     },500);
 }

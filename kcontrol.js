@@ -17,6 +17,7 @@ class _kController
             if (!this.usedKeys)
             {
                 document.querySelector(".buttons-menu").classList.add("keyboard-mode");
+                this.usedKeys=1;
             }
 
             if (e.key=="ArrowRight")
@@ -27,6 +28,18 @@ class _kController
             if (e.key=="ArrowLeft")
             {
                 this.navigate(1);
+            }
+
+            if (e.key=="ArrowUp")
+            {
+                e.preventDefault();
+                this.navigate(1,1);
+            }
+
+            if (e.key=="ArrowDown")
+            {
+                e.preventDefault();
+                this.navigate(-1,1);
             }
 
             if (e.key=="Enter" || e.key=="Space")
@@ -122,11 +135,26 @@ class _kController
     //perform navigation in given direction
     //if a selected card is not onscreen jump to
     //topmost visible using jumpVisible
-    navigate(direction)
+    //give vertical as true to navigate vertically
+    navigate(direction,vertical=0)
     {
         if (this.icurrentBox==-1 || this.inViewport()==-1)
         {
             this.jumpVisible();
+        }
+
+        else if (vertical)
+        {
+            var boxx=Math.floor(_cardsinsert.offsetWidth/290);
+
+            if (boxx==0)
+            {
+                boxx=1;
+            }
+
+            boxx*=direction;
+
+            this.select(this.icurrentBox+boxx);
         }
 
         else
