@@ -61,6 +61,14 @@ class _kController
             {
                 toggleRandomMode();
             }
+
+            if (e.key=="x")
+            {
+                if (this.currentBox)
+                {
+                    this.currentBox.cmark();
+                }
+            }
         });
     }
 
